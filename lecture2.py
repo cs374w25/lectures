@@ -41,6 +41,7 @@ def observed(n=100, c_dim=6, ols="y ~ a"):
     y = np.random.binomial(n=a + c, p=0.5)
 
     df = pd.DataFrame(data=dict(c=c, a=a, y=y))
+    import pdb; pdb.set_trace()
     a_param = get_smf_model_a_param(ols, df)
 
     return a_param
